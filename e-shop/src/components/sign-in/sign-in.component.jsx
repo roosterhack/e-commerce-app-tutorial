@@ -19,36 +19,34 @@ const SignIn = () => {
   };
 
   return (
-    <div className='wrapper'>
-      <div className='sign-in'>
-        <h2>I already have an account</h2>
-        <span>Sign in with your email and password</span>
+    <div className='sign-in'>
+      <h2>I already have an account</h2>
+      <span>Sign in with your email and password</span>
 
-        <form onSubmit={handleSubmit}>
-          <FormInput
-            name='email'
-            type='email'
-            handleChange={(e) => setEmail(e.target.value)}
-            value={email}
-            label='email'
-            required
-          />
-          <FormInput
-            name='password'
-            type='password'
-            value={password}
-            handleChange={(e) => setPassword(e.target.value)}
-            label='password'
-            required
-          />
-          <div className='buttons'>
-            <CustomButton type='submit'> Sign in </CustomButton>
-            <CustomButton onClick={signInwithGoogle} isGoogleSignIn>
-              Sign in with google
-            </CustomButton>
-          </div>
-        </form>
-      </div>
+      <form onSubmit={handleSubmit}>
+        <FormInput
+          name='email'
+          type='email'
+          handleChange={(e) => setEmail(e.target.value)}
+          value={email}
+          label='email'
+          required
+        />
+        <FormInput
+          name='password'
+          type='password'
+          value={password}
+          handleChange={(e) => setPassword(e.target.value)}
+          label='password'
+          required
+        />
+        <div className='buttons'>
+          <CustomButton type='submit'> Sign in </CustomButton>
+          <CustomButton onClick={signInwithGoogle} isGoogleSignIn>
+            Sign in with google
+          </CustomButton>
+        </div>
+      </form>
     </div>
   );
 };
