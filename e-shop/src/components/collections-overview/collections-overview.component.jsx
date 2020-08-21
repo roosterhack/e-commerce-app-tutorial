@@ -6,9 +6,11 @@ import './collections-overview.styles.scss';
 
 export const CollectionsOverview = () => {
   const collections = useSelector((state) => state.shop.collections);
+  const collectionsArray = Object.values(collections)
+
   return (
     <div className='collections-overview'>
-      {collections.map(({ id, ...otherCollectionProps }) => (
+      {collectionsArray.map(({ id, ...otherCollectionProps }) => (
         <CollectionPreview key={id} {...otherCollectionProps} />
       ))}
     </div>
