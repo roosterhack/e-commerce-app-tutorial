@@ -10,7 +10,7 @@ export const CollectionPage = ({ match }) => {
   const collections = useSelector((state) => state.shop.collections);
   const correctCollection = collections[match.params.collectionId];
   const { title, items } = correctCollection;
-console.log(collections)
+
 
   return (
     <div className='collection-page'>
