@@ -6,7 +6,7 @@ import { auth } from '../../firebase/firebase.utils';
 
 import './sign-in.styles.scss';
 
-import { signInwithGoogle } from '../../firebase/firebase.utils';
+import { signInWithGoogle } from '../../firebase/firebase.utils';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -25,30 +25,30 @@ const SignIn = () => {
   };
 
   return (
-    <div className='sign-in'>
+    <div className="sign-in">
       <h2>I already have an account</h2>
       <span>Sign in with your email and password</span>
 
       <form onSubmit={handleSubmit}>
         <FormInput
-          name='email'
-          type='email'
+          name="email"
+          type="email"
           handleChange={(e) => setEmail(e.target.value)}
           value={email}
-          label='email'
+          label="email"
           required
         />
         <FormInput
-          name='password'
-          type='password'
+          name="password"
+          type="password"
           value={password}
           handleChange={(e) => setPassword(e.target.value)}
-          label='password'
+          label="password"
           required
         />
-        <div className='buttons'>
-          <CustomButton type='submit'> Sign in </CustomButton>
-          <CustomButton onClick={signInwithGoogle} isGoogleSignIn>
+        <div className="buttons">
+          <CustomButton type="submit"> Sign in </CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
             Sign in with google
           </CustomButton>
         </div>
